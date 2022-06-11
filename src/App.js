@@ -1,11 +1,23 @@
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import './App.css'
+import { Navbar } from './components/Navbar'
+import { About } from './screens/About'
+import { Contact } from './screens/Contact'
+import { Home } from './screens/Home'
 
 function App() {
   return (
-    <div>
-      <h3>React blog</h3>
-    </div>
-  );
+    <BrowserRouter>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
