@@ -3,7 +3,7 @@ import React from 'react'
 export const Footer = () => {
   return (
     // <div className='container-fluid bg-primary bg-gradient text-white bottom-0 position-absolute' style={{ minHeight: '14rem' }}>
-    <div className='mt-5 container-fluid bg-primary bg-gradient text-white' style={{ minHeight: '14rem' }}>
+    <div className='mt-5 container-fluid bg-black bg-gradient text-white' style={{ minHeight: '14rem' }}>
       <div className='row pt-4 text-center'>
         <div className='col-lg-4 col-md-4 col-sm-12'>
           <h5>Quick Links</h5>
@@ -18,7 +18,7 @@ export const Footer = () => {
           <h5>Newsletter</h5>
           <div className='d-flex flex-column justify-content-around' style={{minHeight: "8rem"}}>
             <input type="text" className='form-control' placeholder='Subscribe to the newsletter' />
-            <button className='btn btn-success'>Subscribe</button>
+            <button className='btn btn-warning'>Subscribe</button>
           </div>
         </div>
         <div className='col-lg-4 col-md-4 col-sm-12'>
