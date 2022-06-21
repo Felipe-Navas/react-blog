@@ -116,7 +116,7 @@ export const Home = () => {
                   the bulk of the card's content.
                 </p>
                 <div className="d-grid">
-                  <a href="#" className="btn btn-warning">
+                  <a href="/" className="btn btn-warning">
                     Read More
                   </a>
                 </div>
@@ -137,7 +137,7 @@ export const Home = () => {
                   the bulk of the card's content.
                 </p>
                 <div className="d-grid">
-                  <a href="#" className="btn btn-warning">
+                  <a href="/" className="btn btn-warning">
                     Read More
                   </a>
                 </div>
@@ -158,7 +158,7 @@ export const Home = () => {
                   the bulk of the card's content.
                 </p>
                 <div className="d-grid">
-                  <a href="#" className="btn btn-warning">
+                  <a href="/" className="btn btn-warning">
                     Read More
                   </a>
                 </div>
@@ -184,7 +184,7 @@ export const Home = () => {
                   the bulk of the card's content.
                 </p>
                 <div className="d-grid">
-                  <a href="#" className="btn btn-warning">
+                  <a href="/" className="btn btn-warning">
                     Read More
                   </a>
                 </div>
@@ -205,7 +205,7 @@ export const Home = () => {
                   the bulk of the card's content.
                 </p>
                 <div className="d-grid">
-                  <a href="#" className="btn btn-warning">
+                  <a href="/" className="btn btn-warning">
                     Read More
                   </a>
                 </div>
@@ -226,7 +226,7 @@ export const Home = () => {
                   the bulk of the card's content.
                 </p>
                 <div className="d-grid">
-                  <a href="#" className="btn btn-warning">
+                  <a href="/" className="btn btn-warning">
                     Read More
                   </a>
                 </div>
@@ -234,6 +234,11 @@ export const Home = () => {
             </div>
           </div>
         </div>
+      </section>
+      <section className='d-flex flex-column justify-content-center align-items-center container-fluid bg-primary bg-gradient mt-4' style={{minHeight: "180px"}}>
+        <i className='fs-1 text-warning fa-solid fa-location-dot'></i>
+        <h3 className='text-white text-uppercase mt-2'>We have wide variety of Post</h3>
+        <button className='fw-bold btn btn-warning my-2 text-uppercase'>View All Posts</button>
       </section>
       <section className="our-porfolio container">
         <h3 className="text-center text-uppercase py-4">Our Portfolio</h3>
