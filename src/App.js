@@ -6,6 +6,7 @@ import { About } from './screens/About'
 import { AllPosts } from './screens/AllPosts'
 import { Contact } from './screens/Contact'
 import { Home } from './screens/Home'
+import { PostDetail } from './screens/PostDetail'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/posts" element={<AllPosts />} />
+          <Route path="/posts/:postId/:userId" element={<PostDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
 export const AllPosts = () => {
   const [posts, setPosts] = useState([])
@@ -43,9 +44,9 @@ export const AllPosts = () => {
                       <h5 className="card-title">{post.title}</h5>
                       <p className="card-text">{post.body}</p>
                       <div className="d-grid">
-                        <a href="/" className="btn btn-warning">
+                        <NavLink to={`/posts/${post.id}/${post.userId}`} className="btn btn-warning">
                           Read More
-                        </a>
+                        </NavLink>
                       </div>
                     </div>
                   </div>
