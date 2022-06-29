@@ -25,7 +25,7 @@ export const AllPosts = () => {
         <h3 className="text-center text-uppercase py-4">All Posts</h3>
         <div className="row">
           {loader ? (
-            <div className='col-12 text-center'>
+            <div className="col-12 text-center">
               <div className="spinner-border text-primary" role="status">
                 <span className="visually-hidden">Loading...</span>
               </div>
@@ -38,15 +38,30 @@ export const AllPosts = () => {
                     <img
                       src="https://source.unsplash.com/random/400*400/?city,night"
                       className="card-img-top"
-                      style={ { height: '300px' } }
+                      style={{ height: '300px' }}
                       alt="..."
                     />
                     <div className="card-body">
                       <h5 className="card-title">{post.title}</h5>
                       <p className="card-text">{post.body}</p>
-                      <div className="d-grid">
-                        <NavLink to={`/posts/${post.id}/${post.userId}`} className="btn btn-warning">
-                          Read More
+                      <div className="d-flex justify-content-between">
+                        <NavLink
+                          to={`/posts/${post.id}/${post.userId}`}
+                          className="btn btn-primary text-uppercase"
+                        >
+                          <i className="fa-solid fa-circle-info me-1"></i>Details
+                        </NavLink>
+                        <NavLink
+                          to={`/posts/${post.id}/${post.userId}`}
+                          className="btn btn-warning text-uppercase"
+                        >
+                          <i className="fa-solid fa-pen-to-square me-1"></i> Edit
+                        </NavLink>
+                        <NavLink
+                          to={`/posts/${post.id}/${post.userId}`}
+                          className="btn btn-danger text-uppercase"
+                        >
+                          <i className="fa-solid fa-trash me-1"></i> Delete
                         </NavLink>
                       </div>
                     </div>

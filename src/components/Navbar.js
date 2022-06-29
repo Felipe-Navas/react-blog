@@ -33,6 +33,11 @@ export const Navbar = () => {
                 </NavLink>
               </li>
               <li className="nav-item">
+                <NavLink className="nav-link text-uppercase" to="/create">
+                  Create
+                </NavLink>
+              </li>
+              <li className="nav-item">
                 <NavLink className="nav-link text-uppercase" to="/about">
                   About us
                 </NavLink>
