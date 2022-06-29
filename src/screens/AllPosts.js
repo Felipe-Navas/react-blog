@@ -38,6 +38,7 @@ export const AllPosts = () => {
                     <img
                       src="https://source.unsplash.com/random/400*400/?city,night"
                       className="card-img-top"
+                      style={ { height: '300px' } }
                       alt="..."
                     />
                     <div className="card-body">
