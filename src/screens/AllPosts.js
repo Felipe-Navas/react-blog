@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
@@ -15,6 +16,37 @@ export const AllPosts = () => {
       })
   }
 
+  const deletePost = (postId) => {
+    let action = window.confirm(
+      `Are you sure you want to delete this post?\nId: ${postId}`
+    )
+    if (action) {
+      axios
+        .delete(`${process.env.REACT_APP_API_BASE_URL}/posts/${postId}`)
+        .then((response) => {
+          showAlert(`Post with id (${postId}) deleted successfully!`, 'success')
+          getAllPosts()
+        })
+        .catch((error) => {
+          console.log(error)
+          showAlert(`Error deleting post: ${error.message}`, 'danger')
+        })
+    }
+  }
+
+  const showAlert = (message, type) => {
+    const wrapper = document.createElement('div')
+    wrapper.innerHTML = [
+      `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+      `   <div>${message}</div>`,
+      '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+      '</div>',
+    ].join('')
+    const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+
+    alertPlaceholder.append(wrapper)
+  }
+
   useEffect(() => {
     getAllPosts()
   }, [])
@@ -23,6 +55,7 @@ export const AllPosts = () => {
     <div>
       <section className="container pt-2">
         <h3 className="text-center text-uppercase py-4">All Posts</h3>
+        <div id="liveAlertPlaceholder"></div>
         <div className="row">
           {loader ? (
             <div className="col-12 text-center">
@@ -49,20 +82,22 @@ export const AllPosts = () => {
                           to={`/posts/${post.id}/${post.userId}`}
                           className="btn btn-primary text-uppercase"
                         >
-                          <i className="fa-solid fa-circle-info me-1"></i>Details
+                          <i className="fa-solid fa-circle-info me-1"></i>
+                          Details
                         </NavLink>
                         <NavLink
-                          to={`/posts/${post.id}/${post.userId}`}
+                          to={`/edit/${post.id}/${post.userId}`}
                           className="btn btn-warning text-uppercase"
                         >
-                          <i className="fa-solid fa-pen-to-square me-1"></i> Edit
+                          <i className="fa-solid fa-pen-to-square me-1"></i>{' '}
+                          Edit
                         </NavLink>
-                        <NavLink
-                          to={`/posts/${post.id}/${post.userId}`}
+                        <button
                           className="btn btn-danger text-uppercase"
+                          onClick={() => deletePost(post.id)}
                         >
                           <i className="fa-solid fa-trash me-1"></i> Delete
-                        </NavLink>
+                        </button>
                       </div>
                     </div>
                   </div>

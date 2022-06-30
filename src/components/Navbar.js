@@ -48,7 +48,7 @@ export const Navbar = () => {
                 </NavLink>
               </li>
             </ul>
-            <form className="d-flex" role="search">
+            <form className="d-flex">
               <input
                 className="form-control me-2"
                 type="search"
@@ -59,6 +59,12 @@ export const Navbar = () => {
                 <i className="fa-solid fa-magnifying-glass"></i>
               </button>
             </form>
+            <NavLink className="btn btn-dark" to="/signup">
+              <i class="fa-solid fa-user-plus"></i>
+            </NavLink>
+            <NavLink className="btn btn-dark" to="/login">
+              <i class="fa-solid fa-right-to-bracket"></i>
+            </NavLink>
           </div>
         </div>
       </nav>

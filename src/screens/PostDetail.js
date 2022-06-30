@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import './PostDetail.css'
 
 export const PostDetail = () => {
@@ -8,6 +8,8 @@ export const PostDetail = () => {
 
   const [post, setPost] = useState({})
   const [user, setUser] = useState({})
+
+  const navigate = useNavigate()
 
   const getPostAndUser = () => {
     axios
@@ -76,6 +78,18 @@ export const PostDetail = () => {
               </li>
               <li className="list-group-item">
                 <a href={`www.${user.website}`}>{user.website}</a>
+              </li>
+              <li className="list-group-item">
+                <div className="d-block">
+                  <button
+                    onClick={() => {
+                      navigate(-1)
+                    }}
+                    className="btn btn-primary w-100 text-uppercase"
+                  >
+                    Back
+                  </button>
+                </div>
               </li>
             </ul>
           </div>
