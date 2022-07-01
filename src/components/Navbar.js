@@ -60,10 +60,10 @@ export const Navbar = () => {
               </button>
             </form>
             <NavLink className="btn btn-dark" to="/signup">
-              <i class="fa-solid fa-user-plus"></i>
+              <i className="fa-solid fa-user-plus"></i>
             </NavLink>
             <NavLink className="btn btn-dark" to="/login">
-              <i class="fa-solid fa-right-to-bracket"></i>
+              <i className="fa-solid fa-right-to-bracket"></i>
             </NavLink>
           </div>
         </div>
