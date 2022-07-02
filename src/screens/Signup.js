@@ -8,11 +8,8 @@ export const Signup = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  const [loading, setLoading] = useState(false)
-
   const signUp = (e) => {
     e.preventDefault()
-    setLoading(true)
     const config = {
       headers: {
         'Content-Type': 'application/json',
@@ -29,17 +26,36 @@ export const Signup = () => {
     axios
       .post(`${process.env.REACT_APP_API_BASE_URL}/users`, reqData, config)
       .then((res) => {
-        console.log(res)
+        setFirstName('')
+        setLastName('')
+        setEmail('')
+        setPhoneNumber('')
+        setPassword('')
+        showAlert(`Registration successfully! please proceed to login`, 'success')
       })
       .catch((err) => {
         console.log(err)
+        showAlert(`Registration failed!`, 'error')
       })
-    setLoading(false)
+  }
+
+  const showAlert = (message, type) => {
+    const wrapper = document.createElement('div')
+    wrapper.innerHTML = [
+      `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+      `   <div>${message}</div>`,
+      '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+      '</div>',
+    ].join('')
+    const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+
+    alertPlaceholder.append(wrapper)
   }
 
   return (
     <div className="container">
       <h3 className="text-center text-uppercase pt-4">Create an Account</h3>
+      <div id="liveAlertPlaceholder"></div>
       <div className="mx-auto contact-form-container shadow-sm p-3 rounded lh-2 text-muted">
         <form
           onSubmit={(e) => {
