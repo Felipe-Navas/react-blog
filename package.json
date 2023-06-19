@@ -1,5 +1,6 @@
 {
   "name": "react-blog",
+  "homepage": "https://Felipe-Navas.github.io/react-blog",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
