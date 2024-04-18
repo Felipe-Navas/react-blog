@@ -35,7 +35,7 @@ export const Home = () => {
           <div className="carousel-inner">
             <div className="carousel-item active">
               <img
-                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aG91c2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                src="https://www.ledcordevelopment.com/wp-content/uploads/2019/01/Belmont-Residences-East_Exterior_Dusk.jpg"
                 className="d-block w-100"
                 alt="..."
               />
@@ -48,7 +48,7 @@ export const Home = () => {
             </div>
             <div className="carousel-item">
               <img
-                src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8aG91c2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                src="https://www.ledcordevelopment.com/wp-content/uploads/2021/01/Belmont-BANNER.jpg"
                 className="d-block w-100"
                 alt="..."
               />
@@ -61,7 +61,7 @@ export const Home = () => {
             </div>
             <div className="carousel-item">
               <img
-                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGhvdXNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                src="https://islandsocialtrends.ca/wp-content/uploads/2020/05/CrossingatBelmont-rendering.jpg"
                 className="d-block w-100"
                 alt="..."
               />
